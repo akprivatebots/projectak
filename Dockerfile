@@ -12,4 +12,6 @@ COPY . .
 RUN pip3 install --no-cache-dir -r requirements.txt
 RUN apt-get update && apt-get upgrade -y
 
+RUN pip3 install aria2p && pip3 install qbittorrent-api && pip3 install ffmpeg && pip3 install yt-dlp
+
 CMD ["bash", "start.sh"]
